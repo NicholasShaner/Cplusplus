@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment Information</title>
+
+  <!-- HTML RUBRIC TEMPLATE -->
+
+  <!-- Bootstrap Grid -->
+  <link rel="stylesheet" href="/shared/custom_html/shared/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!--globalCampus.css containing typography standards -->
+  <link rel="stylesheet" href="/shared/HTML-Template-Library/GC Core Paced/module_templates/../assets/css/main.min.css">
+  <style>
+    h2 {
+      margin-bottom: 0;
+    }
+    p {
+      margin-top: 0;
+    }
+
+    #rubric-responsive table {
+      margin-left: auto;
+      margin-right: auto;
+      border-collapse: collapse;
+      max-width: 1080px;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    #rubric-responsive thead th:first-child {
+      width: 17%;
+    }
+    #rubric-responsive thead th:last-child {
+      width: 10%;
+    }
+
+    #rubric-responsive th,
+    #rubric-responsive td,
+    #rubric-responsive tbody > tr > :nth-child(1) {
+      border: 1px solid black;
+      padding: 7px;
+    }
+
+    #rubric-responsive th,
+    #rubric-responsive tbody > tr > :nth-child(1) {
+      background-color: #f5f5f5;
+    }
+
+#rubric-responsive th {text-align: center;
+                      }
+    #rubric-responsive td,
+    #rubric-responsive tbody > tr > :nth-child(1) {
+      vertical-align: text-top;
+    }
+
+    /* Center data in "Value" column */
+    #rubric-responsive tbody > tr > :last-child {
+      text-align: center;
+    }
+
+    /* Style first column like header row in case <th> isn't used */
+    #rubric-responsive tbody > tr > :nth-child(1) {
+      font-weight: bold;
+      text-align: center;
+    }
+
+/* right align total: text */
+      #rubric-responsive tbody > tr:last-child > :nth-child(1) {
+        font-weight: bold;
+        text-align: right;
+}
+
+    @media only screen and (max-width: 800px) {
+
+      /* Display table elements as block */
+      #rubric-responsive table,
+      #rubric-responsive thead,
+      #rubric-responsive tbody,
+      #rubric-responsive th,
+      #rubric-responsive td,
+      #rubric-responsive tr,
+      #rubric-responsive tfoot {
+        display: block;
+      }
+
+      #rubric-responsive caption {
+        display: inline-block;
+        margin: 0px auto;
+      }
+
+      /* Remove border from table and center it on screen */
+      #rubric-responsive table {
+        border: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+      }
+
+
+    /* Hide table headers (but not display: none; (for accessibility) */
+      #rubric-responsive thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+
+      /* Style responsive table rows */
+      #rubric-responsive tr {
+        border: 1px solid #ccc;
+      }
+
+      /* Style responsive table cells */
+      #rubric-responsive td {
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      #rubric-responsive td:before {
+      /* Bring "data-title" attribute into table cells */
+        content: attr(data-attr);
+      /* display it as inline block so it doesn't interfere with <td> */
+        display: inline-block;
+      /* make it take up it's entire "row" */
+        width: 100%;
+      /* bold font so it looks like a th */
+        font-weight: bold;
+      }
+
+  /* Remove "data-title" attribute from first child <td> cells */
+  /* this removes "Criteria" from the Total row, and will remove criteria from any <td> cells that should be <th> */
+      #rubric-responsive tbody>tr>td:first-child:before {
+          content: none;
+      }
+
+      /* Center data in "Value" column */
+      #rubric-responsive tbody > tr > :last-child {
+        text-align: left;
+      }
+
+      /* Don't display "100%" cell */
+      #rubric-responsive tr:last-child td:last-of-type {
+        display: none;
+      }
+
+      /* Add "100%" after Total:  */
+      #rubric-responsive
+        tr:last-child
+        td:first-of-type::after {
+        content: " 100%";
+      }
+      /* remove padding from last row */
+      #rubric-responsive tr:last-child > td {
+        padding: 7px;
+      }
+    }
+
+    /* Print Styles*/
+    @media print {
+      @page {
+        size: landscape;
+      }
+
+      span.rsbtn_text {
+        display: none !important;
+      }
+
+      p,
+      ul,
+      ol,
+      li,
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr,
+      tfoot {
+        font-size: 12px;
+      }
+
+      h1,
+      h2 {
+        font-size: 90%;
+      }
+
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: 80%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        margin-bottom: 5px;
+        margin-top: 0px;
+      }
+
+      ul,
+      ol {
+        margin-bottom: 5px;
+        margin-top: 0px;
+      }
+
+      .d-print-none {
+        display: none;
+      }
+
+      .d-print-block {
+        display: block;
+      }
+    }
+  </style> 
+     
+  <style>
+    img {
+      float: right;
+      margin-left: 20px;
+      width: 38vw;
+    }
+@media only screen and (max-width: 800px) {
+    img {
+      float:none;
+      align: center;
+      width:100vw;
+      display: block; 
+      margin-left: auto; 
+      margin-right: auto;
+    }
+  </style>
+  </head><body><h1>CS 300 Module Four Assignment Guidelines and Rubric</h1>
+<!--Begin copy to add more sections. Use appropriate heading tags for subsections-->
+<h2>Overview</h2>
+<p>For this assignment, you will use information from a municipal government data feed that contains bids submitted for property auctions. All materials for this lab assignment can be found in the Supporting Materials section below. The data set is provided in two CSV files:</p>
+<ul>
+<li>eBid_Monthly_Sales.csv (larger set of 12,023 bids)</li>
+<li>eBid_Monthly_Sales_Dec_2016.csv (smaller set of 76 bids)</li>
+</ul>
+<p>In this assignment, you will explore hash tables. You will implement a hash table to hold a collection of bids loaded from a CSV file. You will be given a starter console program that uses a menu to enable testing of the hash table logic you will complete. The console program also allows you to pass in the path to the bids CSV file to be loaded, enabling you to try both files. In this version, the following menu is presented when the program is run:</p>
+<p style="padding-left: 30px;">Menu:</p>
+<ol>
+<ol>
+<li>Load Bids</li>
+<li>Display All Bids</li>
+<li>Find Bid</li>
+<li>Remove Bid</li>
+</ol>
+<ol start="9">
+<li>Exit</li>
+</ol>
+</ol>
+<p style="padding-left: 30px;">Enter choice:</p>
+<p>The HashTable.cpp program is partially completed. The program contains empty methods representing the programming interface used to interact with a hash table. You must add logic to the methods to implement the necessary behavior. Here is the public API for HashTable.cpp that you must complete:</p>
+<p style="padding-left: 30px;"><code>public:</code></p>
+<ol>
+<li style="list-style-type: none;">
+<ol>
+<li style="padding-left: 30px;"><code>HashTable();</code></li>
+<li style="padding-left: 30px;"><code>virtual ~HashTable();</code></li>
+<li style="padding-left: 30px;"><code>Hash;</code></li>
+<li style="padding-left: 30px;"><code>void Insert(Bid bid);</code></li>
+<li style="padding-left: 30px;"><code>void PrintAll();</code></li>
+<li style="padding-left: 30px;"><code>void Remove(string bidId);</code></li>
+<li style="padding-left: 30px;"><code>Bid Search(string bidId);</code></li>
+</ol>
+</li>
+</ol>
+<h2>Directions</h2>
+<p>You must perform the following steps to complete this activity:</p>
+<p><strong>Setup:</strong> Begin by creating a new C++ project with the project type ”Hello World C++ Project“. For help setting up your project in Visual Studio C++, refer to the Apporto Visual Studio Setup Instructions and Tips in the Module One Resources section. Name the project “HashTable”.</p>
+<p><strong>Task 1:</strong> Task 1 has already been done for you. Hint: You may be able to reuse portions of your code from previous assignments to save you time. Look for places where you have implemented similar functions to perform these tasks and take advantage of existing code’s reusability whenever possible. You may have to modify the code slightly for each assignment, especially when working with vectors for storage or a node structure for a linked list. Reusing code from these labs may save you time.</p>
+<p><strong>Task 2:</strong> Initialize the structures used to hold bids.</p>
+<p><strong>Task 3:</strong> Implement code to free storage when a class is destroyed.</p>
+<p><strong>Task 4: </strong> Implement code to calculate a hash value using the bid ID as the source for calculating the key.</p>
+<p><strong>Task 5:</strong> Implement code to insert a bid. Be sure to check for key collisions and use the chaining technique with a linked list to store the additional bids.</p>
+<p><strong>Task 6: </strong> Implement code to print all bids.</p>
+<p><strong>Task 7: </strong> Implement code to remove a bid.</p>
+<p><strong>Task 8: </strong>Implement code to search for and return a bid.</p>
+<p>Here is sample output from running the completed program:</p>
+<p><code>&gt; ./HashTable  ~/Downloads/eBid_Monthly_Sales_Dec_2016.csv<br>
+&gt; HashTable.exe Downloads\eBid_Monthly_Sales_Dec_2016.csv</code></p>
+<p style="text-align: center;"><strong>Load bids from CSV and display the hash table contents: </strong></p>
+<div>
+<div style="overflow-x: auto;">
+<table style="border-collapse: collapse; margin-left: auto; margin-right: auto;" cellpadding="15" border="1"><caption></caption>
+<tbody>
+<tr style="text-align: center;">
+<td style="text-align: center;"><strong>Example Input</strong></td>
+<td style="text-align: center;"><strong>Choice: 1</strong></td>
+<td style="text-align: center;"><strong>Choice: 2&nbsp;</strong></td>
+</tr>
+<tr style="text-align: center;">
+<td style="text-align: center;"><strong>Display</strong></td>
+<td style="text-align: left;">Menu:<br>1. Load Bids<br>2. Display All Bids<br>3. Find Bid<br>4. Remove Bid<br>9. Exit<br>Enter choice: 1</td>
+<td style="text-align: left;">Menu:<br>1. Load Bids<br>2. Display All Bids<br>3. Find Bid<br>4. Remove Bid<br>9. Exit<br>Enter choice: 2</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Output</strong></td>
+<td style="text-align: left;">
+<p>Loading CSV file eBid_Monthly_Sales.csv</p>
+<p>12023 bids read<br>time: 3069 clock ticks<br>time: 0.3069 seconds</p>
+</td>
+<td style="text-align: left;">Key 2: 98094 | Credenza |<br>57 | General Fund<br>2: 98273&gt; | Nike Tennis<br>Shoes Size: 11.5 | 84 |<br>Enterprise<br>Key 5: 98276 | Nike Tennis<br>Shoes Size: 11.5 | 83.99 | <br>Enterprise<br>Key 8: 98279 | Nike Tennis <br>Shoes Size: 11 | 51.57 |<br>Enterprise<br>Key 10: 98102 | Battery <br>Cart | 42 | Enterprise<br>Key 12: 98104 | 3 Ticket <br>Booths | 395.01 | Enterprise<br>12: 98283 | Jordan Tennis <br>Shoes Size: 11 | 160 | <br>Enterprise<br>Key 13: 98105 | 2 PS4 <br>Games | 11 | Enterprise<br>13: 98284 | Jordan Tennis<br>Shoes Size: 11 | 89.01 | <br>Enterprise<br>...<br>...<br>Key 176: 98268 | Dayton<br>Pallet Jack | 78.85 |<br>Enterprise<br>Key 177: 98269 | 5 Extron<br>Control Systems | 25 |<br>General Fund</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align: center;">Note that Keys 2, 12, and 13 indicate that key collisions occurred.</p>
+<div style="overflow-x: auto;">
+<p style="text-align: center;"><strong>Finding and removing an existing bid:&nbsp;</strong></p>
+<table style="padding-left: 15px; border-collapse: collapse; margin-left: auto; margin-right: auto;" cellpadding="15" border="1"><caption></caption>
+<tbody>
+<tr style="text-align: center;">
+<td style="text-align: center;"><strong>Example Input</strong></td>
+<td style="text-align: center;"><strong>Choice: 3</strong></td>
+<td style="text-align: center;"><strong>Choice: 4&nbsp;</strong></td>
+</tr>
+<tr style="text-align: center;">
+<td style="text-align: center;"><strong>Display</strong></td>
+<td style="text-align: left;">Menu:<br>1. Load Bids<br>2. Display All Bids<br>3. Find Bid<br>4. Remove Bid<br>9. Exit<br>Enter choice: 3</td>
+<td style="text-align: left;">Menu:<br>1. Load Bids<br>2. Display All Bids<br>3. Find Bid<br>4. Remove Bid<br>9. Exit<br>Enter choice: 4</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Output</strong></td>
+<td style="text-align: left;">
+<p>98223: Chair| 71.88<br>General Fund<br>time: 59 clock ticks<br>time: 5.9e-05 seconds</p>
+</td>
+<td style="text-align: left;">{no output shown}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align: center;"><strong>Finding a bid that no longer exists:</strong></p>
+<table style="padding-left: 15px; border-collapse: collapse; margin-left: auto; margin-right: auto;" cellpadding="15" border="1"><caption></caption>
+<tbody>
+<tr style="text-align: center;">
+<td style="text-align: center;"><strong>Example Input</strong></td>
+<td style="text-align: center;"><strong>Choice: 3</strong></td>
+<td style="text-align: center;"><strong>Choice: 9&nbsp;</strong></td>
+</tr>
+<tr style="text-align: center;">
+<td style="text-align: center;"><strong>Display</strong></td>
+<td style="text-align: left;">Menu:<br>1. Load Bids<br>2. Display All Bids<br>3. Find Bid<br>4. Remove Bid<br>9. Exit<br>Enter choice: 3</td>
+<td style="text-align: left;">Menu:<br>1. Load Bids<br>2. Display All Bids<br>3. Find Bid<br>4. Remove Bid<br>9. Exit<br>Enter choice: 9</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Output</strong></td>
+<td style="text-align: left;">
+<p>Bid Id 98129 not found.</p>
+<p>time: 12 clock ticks<br>time: 1.2e-05 seconds</p>
+</td>
+<td style="text-align: left;">Good bye.</td>
+</tr>
+</tbody>
+</table>
+<p>Specifically, you must address the following rubric criteria:</p>
+<ul>
+<li><strong>Code Reflection:</strong> Briefly describe the purpose of code, techniques implemented to solve problems, challenges encountered, and approaches to overcome the challenges.</li>
+<li><strong>Pseudocode or Flowchart:</strong> Provide a pseudocode or flowchart description of the code that is clear and understandable and captures accurate logic to translate to the programming language.</li>
+<li><strong>Specifications and Correctness:</strong> Source code must meet its specifications and behave as desired. Correct code produces the correct output as defined by the data and problem. However, you should also produce fully functioning code with no errors that aligns with as many of the specifications as possible. You should write your code in a way that the submitted file executes, even if it does not produce the correct output. You will be given credit for partially correct output that can be viewed and seen to be partially correct.</li>
+<li><strong>Annotation and Documentation:</strong> All code should also be well commented. Commenting is a practiced art that requires striking a balance between commenting everything, which adds unneeded noise to the code, and commenting nothing. Well-annotated code requires you to perform the following actions:
+<ul>
+<li>Explain the purpose of lines or sections of your code, detailing the approach and method you took to achieve a specific task in the code.</li>
+<li>Document any section of code that is producing errors or incorrect results.</li>
+</ul>
+</li>
+<li><strong>Modular and Reusable:</strong> Programmers should develop code that is modular and reusable. Code is more flexible and maintainable if it contains functionality and responsibility in distinct methods. Your code should adhere to the single responsibility principle. Classes and methods should do only one job. If you can use a different method without changing other parts of your code, you have succeeded in creating modular methods.</li>
+<li><strong>Readability:</strong> Code needs to be readable to a knowledgeable programmer. In this course, readable code requires the following characteristics:
+<ul>
+<li>Consistent, appropriate whitespace (blank lines, spaces) and indentation to separate distinct parts of the code and operations</li>
+<li>Explicit, consistent variable names, which should clearly indicate the data they hold and be formatted consistently: for example, numOrders (camelCase) or item_cost (underscored)</li>
+<li>Organized structure and clear design that separates components with different responsibilities or grouping-related code into blocks</li>
+</ul>
+</li>
+</ul>
+<!--End copy to add section->
+<!--Do NOT change text for "What to Submit" heading-->
+<h2>What to Submit</h2>
+<p>To complete this lab assignment, submit the HashTable.cpp <strong>code files</strong> and a <strong>code reflection and associated pseudocode or flowchart</strong>. Your written portion should be 1–2 paragraphs in length.</p>
+<h2>Supporting Materials</h2>
+<p>The following resource may help support your work on the project:</p>
+<p><strong>Resource:&nbsp;</strong><span style="text-decoration: underline;"><a href="course_documents/CS%20300%20Hash%20Table%20Assignment%20Student%20Files.zip?_&amp;d2lSessionVal=0Ng0J8VcRzLlAprpTzr7MZxGJ&amp;ou=1332051" target="_blank" rel="noopener">Hash Table Assignment Student Files</a></span><br>Download this zipped file folder to begin your lab assignment. The data sets you will use in this assignment are provided in these CSV files:</p>
+<ul>
+<li>eBid_Monthly_Sales.csv (larger set of 12,023 bids)</li>
+<li>eBid_Monthly_Sales_Dec_2016.csv (smaller set of 76 bids)</li>
+<li>HashTable.cpp program, which is a partially completed program that you can use as a starting point for the assignment</li>
+</ul>
+<h2 style="text-align: center;">Module Four Assignment Rubric</h2>
+<div id="rubric-responsive">
+<table>
+<thead>
+<tr><!--Do NOT change text for "Criteria" column heading-->
+<th class="table-borderless" scope="col">Criteria</th>
+<th scope="col">Proficient (100%)</th>
+<th scope="col">Needs Improvement (70%)</th>
+<th scope="col">Not Evident (0%)</th>
+<!--Do NOT change text for "Value" column heading-->
+<th scope="col">Value</th>
+</tr>
+</thead>
+<tbody><!--Begin copy to add ROWS. Update "td data-attr=" to match table headings exactly before copying and pasting.-->
+<tr>
+<th scope="row">Code Reflection</th>
+<td data-attr="Proficient (100%)">Describes purpose of code, techniques implemented to solve problem, challenges encountered, and approaches to overcome the challenges</td>
+<td data-attr="Needs Improvement (70%)">Lacks details in code purpose, techniques implemented, or challenges encountered</td>
+<td data-attr="Not Evident (0%)">Does not explain purpose of code, techniques used, or challenges encountered</td>
+<td data-attr="Value">25</td>
+</tr>
+<tr>
+<th scope="row">Pseudocode or Flowchart</th>
+<td data-attr="Proficient (100%)">Pseudocode or flowchart is clear and understandable and captures accurate logic to translate to the programming language</td>
+<td data-attr="Needs Improvement (70%)">Pseudocode or flowchart has errors or omissions that affect its clarity or understandability, or the logic to translate to the programming language is inaccurate or incomplete</td>
+<td data-attr="Not Evident (0%)">Pseudocode or flowchart does not contain the logic to translate to the programming language</td>
+<td data-attr="Value">10</td>
+</tr>
+<tr>
+<th scope="row">Specifications and Correctness: Algorithm</th>
+<td data-attr="Proficient (100%)">All algorithm specifications are met completely and function in all cases</td>
+<td data-attr="Needs Improvement (70%)">Details of the specifications are violated, or program often exhibits incorrect behavior</td>
+<td data-attr="Not Evident (0%)">Program only functions correctly in very limited cases or not at all</td>
+<td data-attr="Value">20</td>
+</tr>
+<tr>
+<th scope="row">Specifications and Correctness: Data Structure</th>
+<td data-attr="Proficient (100%)">All data structure specifications are met completely and function in all cases</td>
+<td data-attr="Needs Improvement (70%)">Details of the specifications are violated, or program often exhibits incorrect behavior</td>
+<td data-attr="Not Evident (0%)">Program only functions correctly in very limited cases or not at all</td>
+<td data-attr="Value">20</td>
+</tr>
+<tr>
+<th scope="row">Annotation and Documentation</th>
+<td data-attr="Proficient (100%)">Code annotations explain and facilitate navigation of the code</td>
+<td data-attr="Needs Improvement (70%)">Comments provide little assistance with understanding the code</td>
+<td data-attr="Not Evident (0%)">Code annotations do not explain the code or do not facilitate navigation of code, or code is not fully or logically annotated</td>
+<td data-attr="Value">10</td>
+</tr>
+<tr>
+<th scope="row">Modular and Reusable</th>
+<td data-attr="Proficient (100%)">Methods are limited in scope and responsibility, and both algorithms and data structures are implemented in such a way that they can be reused in other programs</td>
+<td data-attr="Needs Improvement (70%)">Methods have errors in scope or responsibility, or algorithms or data structure are overly tied to the specific program</td>
+<td data-attr="Not Evident (0%)">No attempt was made to develop modular or reusable code</td>
+<td data-attr="Value">10</td>
+</tr>
+<tr>
+<th scope="row">Readability</th>
+<td data-attr="Proficient (100%)">Code follows proper syntax and demonstrates deliberate attention spacing, whitespace, and variable naming</td>
+<td data-attr="Needs Improvement (70%)">Code contains variations from established syntax and conventions</td>
+<td data-attr="Not Evident (0%)">Code contains significant variations from established syntax and conventions</td>
+<td data-attr="Value">5</td>
+</tr>
+<!--End copy to add ROWS--> <!--Paste additional ROWS here.-->
+<tr><!--Update "colspan" if columns are removed. Number should equal 1 less than total number of columns.-->
+<td colspan="4" style="text-align: right;">Total:</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></body></html>
